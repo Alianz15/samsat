@@ -108,7 +108,7 @@ input[type="text"], select {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
+    width: 70%;
 }
 input {
     padding: 10px;
@@ -118,7 +118,7 @@ input {
 
 @media (max-width: 600px) {
     input[type="text"], select {
-        width: 100%; /* Menyesuaikan untuk layar kecil */
+        width: 90%; /* Menyesuaikan untuk layar kecil */
     }
 }
 
