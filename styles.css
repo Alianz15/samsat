@@ -82,7 +82,7 @@ form {
     
 }
 
-h4,h3 {
+h4,h5 {
     text-align: left;
 }
 /* Styling untuk label dan input */
@@ -104,7 +104,7 @@ input[type="date"] {
 }
 
 input[type="text"], select {
-    padding: 10px;
+    padding: 20px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
