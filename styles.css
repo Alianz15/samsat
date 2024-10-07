@@ -10,6 +10,7 @@ body {
 html {
     font-size: 100%;
 }
+
 @media (max-width: 600px) {
     .container {
         padding: 20px;
@@ -26,6 +27,7 @@ html {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .logo {
     width: 200px; /* Ganti dengan ukuran yang diinginkan */
     height: auto; /* Mempertahankan rasio aspek */
@@ -85,7 +87,7 @@ h4,h3 {
 }
 /* Styling untuk label dan input */
 label {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     margin-bottom: 0px;
     margin-top: 10px;
@@ -106,13 +108,19 @@ input[type="text"], select {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 0%;
+    width: 60%;
 }
 
 input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+    input[type="text"], select {
+        width: 90%; /* Menyesuaikan untuk layar kecil */
+    }
 }
 
 button {
