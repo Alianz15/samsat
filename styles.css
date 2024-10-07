@@ -117,10 +117,6 @@ input {
     border-radius: 3px;
 }
 
-@media (max-width: 600px) {
-    input[type="text"], select {
-        width: 90%; /* Menyesuaikan untuk layar kecil */
-    }
 }
 
 button {
