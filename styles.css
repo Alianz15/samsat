@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    background:  #f38a35;
+    border-radius: 10px;
+    padding: 400px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.logo {
+    width: 200px; /* Ganti dengan ukuran yang diinginkan */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-bottom: 10px; /* Jarak antara logo dan judul */
+}
+
+h1 {
+    color: #333;
+}
+
+.service-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-button {
+    display: flex;
+    align-items: center;
+    background-color: #fffffffd;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+    
+}
+
+.service-button:hover {
+    background-color: #f0ec09;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-icon {
+    width: 50px; /* Ganti dengan ukuran yang diinginkan */
+    height: 50px; /* Ganti dengan ukuran yang diinginkan */
+    margin-right: 10px; /* Spasi antara gambar dan teks */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: left;
+    
+}
+
+h4,h3 {
+    text-align: left;
+    gap: 110px;
+}
+/* Styling untuk label dan input */
+label {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="date"] {
+    width: 150px; /* Mengatur lebar input box */
+    padding: 8px; /* Padding dalam untuk konten input */
+    font-size: 14px; /* Ukuran font di dalam input */
+    border: 1px solid #ccc; /* Border di sekitar input */
+    border-radius: 4px; /* Membuat sudut input menjadi bulat */
+    box-sizing: border-box; /* Pastikan padding dan border diikutsertakan dalam lebar elemen */
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.instagram {
+    background-color: #E1306C;
+}
