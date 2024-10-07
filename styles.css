@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    margin: 90;
+    margin: 10px;
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
@@ -18,10 +18,11 @@ html {
     text-align: center;
     background:  #f38a35;
     border-radius: 10px;
-    padding: 100px;
+    padding: 50px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .logo {
     width: 200px; /* Ganti dengan ukuran yang diinginkan */
     height: auto; /* Mempertahankan rasio aspek */
@@ -76,7 +77,6 @@ form {
 
 h4,h3 {
     text-align: left;
-    gap: 110px;
 }
 /* Styling untuk label dan input */
 label {
