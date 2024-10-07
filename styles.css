@@ -104,11 +104,11 @@ input[type="date"] {
 }
 
 input[type="text"], select {
-    padding: 8px;
+    padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 150px;
+    width: 100%;
 }
 input {
     padding: 10px;
@@ -118,7 +118,7 @@ input {
 
 @media (max-width: 600px) {
     input[type="text"], select {
-        width: 90%; /* Menyesuaikan untuk layar kecil */
+        width: 50%; /* Menyesuaikan untuk layar kecil */
     }
 }
 
