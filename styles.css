@@ -45,6 +45,8 @@ h1 {
 
 .service-button {
     display: flex;
+    justify-content: flex-start;
+    text-align: left;
     align-items: center;
     background-color: #fffffffd;
     color: rgb(0, 0, 0);
