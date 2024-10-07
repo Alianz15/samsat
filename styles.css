@@ -13,7 +13,7 @@ html {
 
 .container {
     width: 90%;
-    max-width: 100%;
+    max-width: 90%;
     margin: 30px auto;
     text-align: center;
     background:  #f38a35;
@@ -22,7 +22,6 @@ html {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
 .logo {
     width: 200px; /* Ganti dengan ukuran yang diinginkan */
     height: auto; /* Mempertahankan rasio aspek */
