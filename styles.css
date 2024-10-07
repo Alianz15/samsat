@@ -118,7 +118,7 @@ input {
 
 @media (max-width: 600px) {
     input[type="text"], select {
-        width: 50%; /* Menyesuaikan untuk layar kecil */
+        width: 80%; /* Menyesuaikan untuk layar kecil */
     }
 }
 
