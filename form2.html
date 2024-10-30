@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pelayanan 2</title>
+    <title>Form Pelayanan 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Form Pelaporan KBM yang sudah tidak dimiliki</h1>
-        <h4>Pelaporan Kendaraan Bermotor yang Sudah Tidak Dimiliki di Wilayah SAMSAT PANDEGLANG. </h3>
-        <h5>Kendaraan yang sudah dilaporkan, akan dilakukan pemblokiran pendataan untuk menghindari wajib pajak terkena Pajak Progresif sesuai dengan Peraturan Daerah Daerah tentang "Pajak Daerah".</h4>
-        <form id="form-pelayanan-2">
-            <label for="nopol">Nomor Polisi Kendaraan: (Contoh : A 1234 XX)</label>
-            <input type="text" id="nopol" name="nopol" placeholder="Nomor Polisi Kendaraan Anda" required>
+        <h1>Form Permohonan Layanan Jemput Bola Samsat Pandeglang</h1>
+        <h4>Form untuk mengajukan permohonan layanan Jemput Bola Pajak Tahunan dari Samsat Pandeglang yang akan datang ke lokasi sesuai permintaan pemohon (khusus kendaraan A Pandeglang)</h4>
+        <form id="form-pelayanan-1">
+            <!-- Dropdown Selection -->
+            <label for="jenis_layanan">Pilih Jenis Layanan:</label>
+            <select id="jenis_layanan" name="jenis_layanan" required>
+            <option value="" disabled selected>Pilih layanan</option>
+            <option value="Pajak Tahunan minimal 5 KBM">Pajak Kendaraan Bermotor Tahunan</option>
+            <option value="Pajak 5 Tahunan minimal 10 KBM">Pajak 5 Tahunan</option>
+            </select>
+            <label for="nama">Nama Pemohon:</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Pemohon" required>
             
-            <label for="merk">Merk/Type: (Contoh : Honda-Jazz, Yamaha-Aerox)</label>
-            <input type="text" id="merk" name="merk" placeholder="Merk/Type Kendaraan Anda" required>
+            <label for="alamat">Alamat Anda:</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda" required>
             
-            <label for="tahun">Model Tahun: (Contoh : 2004, 2021)</label>
-            <input type="text" id="tahun" name="tahun" placeholder="Model Tahun Kendaraan Anda" required>
-
-            <label for="pemilik">Nama Pemilik: (Sesuai dengan STNK)</label>
-            <input type="text" id="pemilik" name="pemilik" placeholder="Isi Nama Pemilik" required>
-
             <label for="telepon">Nomor Telepon:</label>
             <input type="text" id="telepon" name="telepon" placeholder="Nomor Telepon Anda" required>
+
+            <label for="tanggal">Tanggal Pelaksanaan:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+
+            <label for="jumlah">Jumlah Kendaraan:</label>
+            <input type="text" id="jumlah" name="jumlah" placeholder="Jumlah Kendaraan Anda" required>
             
-            <label for="status">Status Kendaraan:</label>
-            <select id="status" name="status" required>
-            <option value="" disabled selected>Pilih Status Kendaraan</option>
-            <option value="KBM Sudah dijual">KBM Sudah dijual</option>
-            <option value="WP Pinjam Nama">WP Pinjam Nama</option>
-            <option value="KBM Rusak Berat">KBM Rusak Berat</option>
-            <option value="KBM Hilang">KBM Hilang</option>
-            </select>
+            <label for="lokasi">Lokasi Layanan:</label>
+            <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi Layanan" required>
+
+            <label for="nopol">Daftar Nomor Polisi Kendaraan: (Contoh: A 1234 XY)</label>
+            <input type="text" id="nopol" name="nopol" placeholder="Nomor Polisi Kendaraan Anda" required>
 
             <button type="submit">Kirim Form</button>
         </form>
@@ -43,7 +46,7 @@
 
     <script>
         // Mendapatkan elemen form
-        const form = document.getElementById('form-pelayanan-2');
+        const form = document.getElementById('form-pelayanan-1');
 
         // Event listener untuk menangani submit form
         form.addEventListener('submit', function(event) {
@@ -51,19 +54,20 @@
             event.preventDefault();
 
             // Mengambil data dari form
-            const nopol = document.getElementById('nopol').value;
-            const merk = document.getElementById('merk').value;
-            const tahun = document.getElementById('tahun').value;
-            const pemilik = document.getElementById('pemilik').value;
+            const jenisLayanan = document.getElementById('jenis_layanan').value;
+            const nama = document.getElementById('nama').value;
+            const alamat = document.getElementById('alamat').value;
             const telepon = document.getElementById('telepon').value;
-            const status = document.getElementById('status').value;
-
+            const tanggal = document.getElementById('tanggal').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const lokasi = document.getElementById('lokasi').value;
+            const nopol = document.getElementById('nopol').value;
             
             // Nomor WhatsApp tujuan
             const whatsappNumber = "6289526543809";
 
             // Pesan yang akan dikirim melalui WhatsApp
-            const message = `Halo, saya ingin melakukan Pelaporan KBM yang sudah tidak dimiliki \nNopol: ${nopol}.\nMerk: ${merk}\nTahun: ${tahun}\nPemilik: ${pemilik}\nTelepon: ${telepon}\nStatus: ${status}`;
+            const message = `Halo, saya ingin melakukan Permohonan Layanan Jemput Bola. \nJenis Layanan: ${jenisLayanan}.\nNama: ${nama}\nAlamat: ${alamat}\nTelepon: ${telepon}\nTanggal: ${tanggal}\nJumlah Kendaraan: ${jumlah}\nLokasi: ${lokasi}\nNopol: ${nopol}`;
 
             // Membuat URL WhatsApp
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
