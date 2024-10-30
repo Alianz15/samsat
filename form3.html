@@ -3,18 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pelayanan 3</title>
+    <title>Form Pelayanan 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Form Pelayanan 3</h1>
-        <form action="https://wa.me/6281234567890" method="get" target="_blank">
-            <input type="text" name="nama" placeholder="Nama Anda" required>
-            <input type="text" name="alamat" placeholder="Alamat Anda" required>
+        <h1>Form (XXXJemput Bola Potensi Pajak KendaraanXXX)</h1>
+        <h4>Kemudahan Pembayaran Pajak Kendaraan dengan Layanan Jemput Bola</h4>
+        <form id="form-pelayanan-3">
+            <!-- Dropdown Selection -->
+            <label for="alamat">Alamat Pemilik KBM Anda:</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda" required>
+
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="text" id="telepon" name="telepon" placeholder="Nomor Telepon Anda" required>
+
+            <label for="nopol">Nomor Polisi Kendaraan: (Contoh : A 1234 XX)</label>
+            <input type="text" id="nopol" name="nopol" placeholder="Nomor Polisi Kendaraan Anda" required>
+
+            <label for="merk">Merk/Type: (Contoh : Honda-Jazz, Yamaha-Aerox)</label>
+            <input type="text" id="merk" name="merk" placeholder="Merk/Type Kendaraan Anda" required>
+
+            <label for="pemilik">Nama Pemilik: (Sesuai dengan STNK)</label>
+            <input type="text" id="pemilik" name="pemilik" placeholder="Isi Nama Pemilik" required>
+
+            <label for="roda">Jenis KBM:</label>
+            <select id="roda" name="roda" required>
+            <option value="" disabled selected>Pilih Roda Kendaraan</option>
+            <option value="Roda 2">Roda 2</option>
+            <option value="Roda 4">Roda 4</option>
+            <option value="Roda 4/8">Roda 4/8</option>
+            </select>
+
+            <label for="tahun">Model Tahun: (Contoh : 2004, 2021)</label>
+            <input type="text" id="tahun" name="tahun" placeholder="Model Tahun Kendaraan Anda" required>
+
             <button type="submit">Kirim Form</button>
         </form>
         <a href="index.html" class="back-button">Kembali</a>
     </div>
+
+    <script>
+        // Mendapatkan elemen form
+        const form = document.getElementById('form-pelayanan-1');
+
+        // Event listener untuk menangani submit form
+        form.addEventListener('submit', function(event) {
+            // Mencegah form dari submit default
+            event.preventDefault();
+
+            // Mengambil data dari form
+            const alamat = document.getElementById('alamat').value;
+            const telepon = document.getElementById('telepon').value;
+            const nama = document.getElementById('nama').value;
+            const nopol = document.getElementById('nopol').value;
+            const merk = document.getElementById('merk').value;
+            const pemilik = document.getElementById('pemilik').value;
+            const roda = document.getElementById('roda').value;
+            const tahun = document.getElementById('tahun').value;
+            
+            // Nomor WhatsApp tujuan
+            const whatsappNumber = "6289526543809";
+
+            // Pesan yang akan dikirim melalui WhatsApp
+            const message = `Halo, saya ingin melakukan Permohonan Layanan Jemput Bola. 
+            \nAlamat : ${alamat}.\nNomor Telepon : ${telepon}\nNama : ${nama}\nNomor Polisi : ${nopol}
+            \nMerk Kendaraan : ${merk}\nNama Pemilik :${pemilik}\nRoda : ${roda}\nTahun KBM : ${tahun}`;
+
+            // Membuat URL WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            // Redirect ke URL WhatsApp
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
 </body>
 </html>
