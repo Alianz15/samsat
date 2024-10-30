@@ -9,16 +9,15 @@
 <body>
     <div class="container">
         <h1>Form Permohonan Layanan Jemput Bola Samsat Pandeglang</h1>
-        <h5>Form untuk mengajukan permohonan layanan Jemput Bola Pajak Tahunan dari Samsat Pandeglang yang akan datang ke lokasi sesuai permintaan pemohon (khusus kendaraan A Pandeglang)</h4>
+        <h4>Form untuk mengajukan permohonan layanan Jemput Bola Pajak Tahunan dari Samsat Pandeglang yang akan datang ke lokasi sesuai permintaan pemohon (khusus kendaraan A Pandeglang)</h4>
         <form id="form-pelayanan-1">
             <!-- Dropdown Selection -->
             <label for="jenis_layanan">Pilih Jenis Layanan:</label>
             <select id="jenis_layanan" name="jenis_layanan" required>
             <option value="" disabled selected>Pilih layanan</option>
-            <option value="Pajak Tahunan minimal 10 KBM">Pajak Tahunan minimal 10 KBM</option>
-            <option value="Pajak Tahunan minimal 5 KBM">Pajak Tahunan minimal 5 KBM</option>
-            <option value="Pajak 5 Tahunan minimal 10 KBM">Pajak 5 Tahunan minimal 10 KBM</option>
-        </select>
+            <option value="Pajak Tahunan minimal 5 KBM">Pajak Kendaraan Bermotor Tahunan</option>
+            <option value="Pajak 5 Tahunan minimal 10 KBM">Pajak 5 Tahunan</option>
+            </select>
             <label for="nama">Nama Pemohon:</label>
             <input type="text" id="nama" name="nama" placeholder="Nama Pemohon" required>
             
@@ -68,7 +67,7 @@
             const whatsappNumber = "6289526543809";
 
             // Pesan yang akan dikirim melalui WhatsApp
-            const message = `Halo, saya ingin melakukan ${jenisLayanan}.\nNama: ${nama}\nAlamat: ${alamat}\nTelepon: ${telepon}\nTanggal: ${tanggal}\nJumlah Kendaraan: ${jumlah}\nLokasi: ${lokasi}\nNopol: ${nopol}`;
+            const message = `Halo, saya ingin melakukan Permohonan Layanan Jemput Bola. \nJenis Layanan: ${jenisLayanan}.\nNama: ${nama}\nAlamat: ${alamat}\nTelepon: ${telepon}\nTanggal: ${tanggal}\nJumlah Kendaraan: ${jumlah}\nLokasi: ${lokasi}\nNopol: ${nopol}`;
 
             // Membuat URL WhatsApp
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
